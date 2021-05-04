@@ -7,14 +7,14 @@ import os
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--input_dat')
+parser.add_argument('--dat')
 parser.add_argument('--array_id',help='unique id for array to be analyzed')
 parser.add_argument('--specimen',help='mouse or human')
 parser.add_argument('--out_dir')
 
 args = parser.parse_args()
 
-# input_dat is path to file with beads x features for all curated cell type calls in an array
+# dat is path to file with beads x features for all curated cell type calls in an array
 # features = {'barcode','x','y','cell_type'}
 dat = args.dat
 array_id = args.array_id

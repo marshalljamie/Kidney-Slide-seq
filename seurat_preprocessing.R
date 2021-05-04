@@ -30,9 +30,8 @@ for (i in 1:nrow(array_ids)){
   crds <- read.csv(input_path)
   # input path is path to file with beads x features
   # features = {'barcode','gene1,'gene2',...,'genen'}
-  input_path = paste(array_id,'counts.csv',sep='_')
-  cts<- read.csv(input_path)
-  #cts = as.data.frame(cts)
+  input_path = paste(array_id,'counts.feather',sep='_')
+  cts<- arrow::read_feather(input_path)
   
   # check this
   cts['X'] = NULL

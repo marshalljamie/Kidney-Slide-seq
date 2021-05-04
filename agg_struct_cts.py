@@ -31,11 +31,11 @@ def aggregate_struct(celltype_counts):
 
 # input path is path to file with beads x features for curated and partitioned cell type of interest in section of interest
 # features = {'barcode','x','y','cell_type','section','cluster','gene1','gene2',...,'genen'}
-input_path = 'celltype_cts.csv'
+input_path = '{array_id}_{cell_type}_{section}_cts.pkl'.format(array_id=array_id,section=section,cell_type=cell_type)
 if path.exists(input_path):
-    celltype_counts = pd.read_csv(input_path,index_col=0)
+    celltype_counts = pd.read_pickle(input_path)
     celltype_agg = aggregate_struct(celltype_counts)
 
     # out_path is path to output file
-    out_path = '{array_id}_{cell_type}_agg_cts.csv'.format(array_id=array_id,cell_type=cell_type)
+    out_path = '{array_id}_{cell_type}_{section}_agg_cts.csv'.format(array_id=array_id,cell_type=cell_type,section=section)
     celltype_agg.to_csv(out_path)

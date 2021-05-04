@@ -10,16 +10,18 @@ import seaborn as sns
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--array_id',help='unique id for array to be analyzed')
+parser.add_argument('--cell_type')
 parser.add_argument('--section',help='cortex or medulla')
 
 args = parser.parse_args()
 
 array_id = args.array_id
+cell_type = args.cell_type
 section = args.section
 
 # input path is path to file with beads x features for the curated cell type of interest
 # features = {'barcode','x','y'}
-input_path = 'celltype_info.csv'
+input_path = '{array_id}_{cell_type}_{section}_info.csv'.format(array_id=array_id,cell_type=cell_type,section=section)
 if path.exists(input_path):
     celltype_info = pd.read_csv(input_path,index_col=0)
 
