@@ -23,7 +23,7 @@ parser.add_argument('--cell_type')
 parser.add_argument('--section',help='cortex or medulla')
 parser.add_argument('--data_form',help='bead or aggregate')
 # only needs to be specified for mice
-parser.add_argument('--genotype_list', nargs='+', help='list of genotypes to be compared, e.g. \'DKD WT\'')
+parser.add_argument('--genotype_list', nargs='+', help='list of genotypes to be compared, e.g. \'WT UMOD-KI\'')
 
 # parameters for umap dimensionality reduction
 # for descriptions on each of these parameters, see https://umap-learn.readthedocs.io/en/latest/parameters.html?highlight=parameters
@@ -47,7 +47,7 @@ section = args.section
 genotypes = args.genotype_list
 
 # input path is path to data matrix with beads x features for curated beads (or aggregates) of specified cell type in specified section 
-# belonging to arrays of diseased and healthy groups to-be-compared (i.e., (WT vs. UMOD_KI, WT vs. DKD, etc.))
+# belonging to arrays of diseased and healthy groups to-be-compared (i.e., (WT vs. UMOD_KI, BTBR wt/wt vs. BTBR ob/ob, etc.))
 # for clustering on bead basis, features = {'barcode','array_id','genotype','batch','gene1','gene2',...,'genen'}; gene counts are sctransform residuals from Seurat
 # for clustering on aggregate basis, features = {'array_id','genotype','batch','gene1','genen2',...,'genen'}; gene counts are averages of sctransform residuals from Seurat per structure
 input_path = 'combined_cts.pkl'
