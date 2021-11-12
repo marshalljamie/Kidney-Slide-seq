@@ -60,13 +60,13 @@ all_df = all_df.drop(columns={'index'})
 
 d = {'IRE1alpha-down': ['Yif1a','Tmem165'],
      'PERK-down': ['Hspe1','Rps26','Ppia','Ndufs5','Prdx1','Ptma','Dnaja1','Tubb4b','Uqcr11','Polr2l','Cox6b1','Rps10','Cox6a1'],
-     'PERK-up': ['Mthfd2','Eif4ebp1','Xbp1','Trib3','Socs2','Cebpg','Eif1b','Eif1','Map1b','Gars','Pck2','Sesn2','Cth','Psph','Wars','Phgdh','Bex2','Lmo4','Fam89a','Tsc22d3','Rgs16','Map3k8','Idh1','Ccpg1','Pim1','Slc3a2','Snhg8'],
+     'PERK-up': ['Mthfd2','Eif4ebp1','Xbp1','Ddit3','Trib3','Socs2','Cebpg','Eif1b','Eif1','Map1b','Gars','Pck2','Sesn2','Cth','Psph','Wars','Phgdh','Hax1','Psat1','Bex2','Lmo4','Fam89a','Tsc22d3','Rgs16','Map3k8','Idh1','Ccpg1','Pim1','Slc3a2','Snhg8'],
      'IRE1alpha-up': ['Dnajb9','Tmed2','Serp1','Vimp','Derl2','Slc35b1','Erlec1','Armcx3','Sec61a1','Sec61b','Ppib','Ssr2','Tmed9','Nans','Ostc','Ssr3','Ssr1'],
      'ATF6-up': ['Selk','Cdk2ap2','Hspa5','Herpud1','Sdf2l1','Dnajb11','Manf','Hsp90b1','Creld2','Pdia6','Pdia4','Calr','Dnajc3','Hyou1','Tmem50b'],
     }
 
-order = ['Yif1a','Tmem165','Hspe1','Rps26','Ppia','Ndufs5','Prdx1','Ptma','Dnaja1','Tubb4b','Uqcr11','Polr2l','Cox6b1','Rps10','Cox6a1','Mthfd2','Eif4ebp1','Xbp1','Trib3','Socs2',
-         'Cebpg','Eif1b','Eif1','Map1b','Gars','Pck2','Sesn2','Cth','Psph','Wars','Phgdh','Bex2','Lmo4','Fam89a','Tsc22d3','Rgs16','Map3k8','Idh1','Ccpg1','Pim1','Slc3a2',
+order = ['Yif1a','Tmem165','Hspe1','Rps26','Ppia','Ndufs5','Prdx1','Ptma','Dnaja1','Tubb4b','Uqcr11','Polr2l','Cox6b1','Rps10','Cox6a1','Mthfd2','Eif4ebp1','Xbp1','Ddit3','Trib3','Socs2',
+         'Cebpg','Eif1b','Eif1','Map1b','Gars','Pck2','Sesn2','Cth','Psph','Wars','Phgdh','Hax1','Psat1','Bex2','Lmo4','Fam89a','Tsc22d3','Rgs16','Map3k8','Idh1','Ccpg1','Pim1','Slc3a2',
          'Snhg8','Dnajb9','Tmed2','Serp1','Vimp','Derl2','Slc35b1','Erlec1','Armcx3','Sec61a1','Sec61b','Ppib','Ssr2','Tmed9','Nans','Ostc','Ssr3','Ssr1','Selk','Cdk2ap2','Hspa5',
          'Herpud1','Sdf2l1','Dnajb11','Manf','Hsp90b1','Creld2','Pdia6','Pdia4','Calr','Dnajc3',
          'Hyou1','Tmem50b']
